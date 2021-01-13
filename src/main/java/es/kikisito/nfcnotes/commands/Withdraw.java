@@ -142,7 +142,7 @@ public class Withdraw implements CommandExecutor {
             String formattedMoney = decimalFormat.format(money * amount);
             // Execute if the event wasn't cancelled
             // Execute withdraw and get Vault's response
-            // EconomyResponse response = plugin.getVaultEco().withdrawPlayer(player, money * amount);
+             EconomyResponse response = plugin.getVaultEco().withdrawPlayer(player, money * amount);
             if (Utils.getPlayerBalance(plugin, player) >= money * amount) {
                 if(Utils.withdrawSuccessful(plugin, player, money * amount)) {
                     // Create the note and give it to the player
